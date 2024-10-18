@@ -1,9 +1,9 @@
 ---
 import Header from "@components/Header.astro";
 
-// interface Props {
-// 	title: string;
-// }
+interface Props {
+	title: string;
+}
 
 const { title } = Astro.props;
 ---
@@ -28,12 +28,16 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 
-	<body class="bg-carbon text-ash font-jetbrains max-h-screen">
-		<div class="h-full">
+	<body class="bg-carbon text-ash font-jetbrains w-full flex">
+		<div class="h-screen w-full flex flex-col">
 			<Header />
 			<slot />
 		</div>
 	</body>
 </html>
 
-<style is:global></style>
+<style is:global>
+	* {
+		box-sizing: border-box;
+	}
+</style>
