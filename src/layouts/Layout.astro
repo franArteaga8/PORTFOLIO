@@ -16,15 +16,6 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="./favicon.svg" />
 
-		<link
-			href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
-			rel="stylesheet"
-		/>
-		<link
-			href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap"
-			rel="stylesheet"
-		/>
-
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -43,5 +34,28 @@ const { title } = Astro.props;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		text-rendering: optimizeLegibility;
+	}
+
+	@font-face {
+		font-family: "JetBrains Mono";
+		src: url("/src/assets/fonts/JetBrainsMono-VariableFont_wght.ttf")
+			format("truetype");
+		font-weight: 100 900;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: "JetBrains Mono";
+		src: url("/src/assets/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf")
+			format("truetype");
+		font-weight: 100 900;
+		font-style: italic;
+	}
+
+	@font-face {
+		font-family: "Bebas Neue";
+		src: url("/src/assets/fonts/BebasNeue-Regular.ttf") format("truetype");
+		font-weight: 100 900;
+		font-style: normal;
 	}
 </style>
